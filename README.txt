@@ -1,42 +1,44 @@
-# 🩺 UniBot Medicarama - Tutor IA Universitario
+# UniBot Medicarama - Tutor IA Universitario
 
 Este proyecto es un asistente virtual inteligente diseñado para estudiantes de ciencias de la salud. Utiliza **Google Gemini (Vertex AI)** para razonar y **FastAPI** como servidor web.
 
-### 🌟 Funcionalidades
-* **Chat Educativo:** Responde dudas médicas basándose estrictamente en documentos oficiales (RAG).
-* **Multimodal:** Permite subir imágenes o PDFs para que la IA los analice.
-* **Memoria:** Mantiene el hilo de la conversación.
-* **Generación de Apuntes:** Crea resúmenes en PDF descargables.
+### Funcionalidades
+* Chat Educativo: Responde dudas médicas basándose estrictamente en documentos oficiales (RAG).
+* Multimodal: Permite subir imágenes o PDFs para que la IA los analice.
+* Memoria: Mantiene el hilo de la conversación.
+* Generación de Apuntes: Crea resúmenes en PDF descargables.
 
 ---
 
-## 📂 1. Estructura del Proyecto
+## 1. Estructura del Proyecto
 
 Tu carpeta debe quedar organizada exactamente así:
 
-```text
+
 PROYECTO/
 │
-├── app/                    # 🧠 LÓGICA DEL BACKEND
+├── app/                    # LÓGICA DEL BACKEND
 │   ├── __init__.py         # Archivo vacío
 │   ├── main.py             # Servidor y Endpoints
 │   ├── services.py         # Conexión Gemini y PDF
 │   ├── models.py           # Modelos de datos
 │   └── config.py           # Configuración y Prompts
 │
-├── static/                 # 🎨 FRONTEND
+├── static/                 # FRONTEND
 │   ├── css/                # style.css
 │   ├── js/                 # main.js
 │   └── images/             # logo.png, micro.png...
 │
-├── index.html              # 🏠 Web principal
-├── requirements.txt        # 📦 Librerías (ver paso 2)
-└── README.md               # 📖 Este archivo
+├── index.html              # Web principal
+├── requirements.txt        # Librerías (ver paso 2)
+└── README.md               # Este archivo
 
 
 INICIACIÓN Y EJECUCIÓN
 
-Paso B: Crear Entorno Virtual (Recomendado)
+Paso B: Crear Entorno Virtual 
+Si hay uno borralo con 
+rm -rf venv
 Abre tu terminal en la carpeta del proyecto y ejecuta:
 
 En Windows:
@@ -69,7 +71,7 @@ gcloud auth application-default login
 
 
 
-▶️ 3. Ejecutar el Servidor
+ 3. Ejecutar el Servidor
 
 Desde la carpeta raíz del proyecto, lanza el comando:
 
