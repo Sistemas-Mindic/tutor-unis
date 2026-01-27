@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tutor Medicarama AI</title>
+    
+    <link rel="icon" type="image/png" href="static/images/logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <div class="mobile-overlay" id="mobile-overlay" onclick="toggleSidebar()"></div>
+
+    <div id="pdf-loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h3 id="loader-text">Preparando IA...</h3>
+            <p>Redactando tus apuntes profesionales</p>
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-area">
+            <span>Medicarama AI</span>
+            <button class="close-sidebar-btn" onclick="toggleSidebar()">❮</button>
+        </div>
+        
+        <button class="new-chat-btn" onclick="startNewChatUI()">
+            <span>➕</span> Nuevo Chat
+        </button>
+        
+        <div style="font-size:0.8rem; color:#64748b; margin:10px 0 5px 5px; font-weight:600;">
+            HISTORIAL
+        </div>
+        
+        <ul class="sidebar-menu" id="history-list"></ul>
+        
+        <div style="margin-top: auto;">
+            <button class="delete-all-btn" onclick="clearAllHistory()">
+                🗑️ Borrar Historial
+            </button>
+            <button class="new-chat-btn" 
+                    style="background:transparent; border:none; justify-content:flex-start;" 
+                    onclick="toggleTheme()">
+                <span>🌓</span> Tema
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content start-mode" id="main-content">
+        <header>
+            <button id="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="static/images/logo.png" alt="Logo Medicarama" style="height: 35px; width: auto; background-color: transparent;">
+                <h2 style="margin:0; font-size: 1.2rem;">Tutor Virtual</h2>
+            </div>
+        </header>
+
+        <div id="welcome-message">
+            <h1>¿En qué puedo ayudarte?</h1>
+        </div>
+
+        <div id="chat-box"></div>
+
+        <div class="input-container">
+            
+            <div id="file-preview-container">
+                <img id="preview-img" alt="Previsualización">
+                <span id="preview-icon">📄</span>
+                <span id="file-name">documento.pdf</span>
+                <button id="remove-file-btn" onclick="clearFileSelection()">✕</button>
+            </div>
+
+            <div class="input-wrapper">
+                
+                <input type="file" id="file-input" style="display: none;" onchange="handleFileSelect(event)">
+                
+                <button id="attach-btn" class="icon-btn" onclick="document.getElementById('file-input').click()" title="Adjuntar archivo">
+                    <span>+</span>
+                </button>
+
+                <textarea id="user-input" 
+                          rows="1" 
+                          placeholder="Pregunta sobre TFG, Urgencias, Triaje..." 
+                          oninput="autoResize(this)" 
+                          onkeydown="handleEnter(event)"></textarea>
+                          
+                <button id="mic-btn" class="icon-btn" onclick="toggleVoice()">
+                    <img src="static/images/micro.png" alt="Hablar" style="width: 24px; height: 24px;">
+                </button>
+                <button id="send-btn" class="icon-btn" onclick="sendMessage()">➤</button>
+                <button id="stop-btn" class="icon-btn" onclick="stopGeneration()" 
+                        style="display:none; background-color: #ef4444;">
+                    ⏹️
+                </button>
+            </div>
+            
+            <div id="suggestions-wrapper"></div>
+        </div>
+    </main>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
