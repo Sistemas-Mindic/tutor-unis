@@ -13,7 +13,7 @@ import io
 import os
 
 from .config import (
-    PROJECT_ID, REGION, DATA_STORE_ID, DATA_STORE_ID_TFG,
+    PROJECT_ID, REGION, DATA_STORE_ID, DATA_STORE_ID_TFG, OPEN_DATA_STORE_ID,
     system_instruction, filtros_seguridad, configuracion_tutor
 )
 
@@ -42,10 +42,65 @@ herramienta_tfg = Tool.from_retrieval(
     )
 )
 
-# --- MODELO ---
+# Herramienta de DOCUMENTOS ABIERTOS (apuntes generales, todos los alumnos).
+# Sólo se construye si OPEN_DATA_STORE_ID está configurado (se suben los abiertos
+# más tarde). Al vivir en su PROPIO data store SIN capar, el grounding clásico
+# vale: no hay capeo que romper porque son abiertos para todo el mundo.
+herramienta_abierta = None
+if OPEN_DATA_STORE_ID:
+    herramienta_abierta = Tool.from_retrieval(
+        retrieval=grounding.Retrieval(
+            source=grounding.VertexAISearch(
+                datastore=OPEN_DATA_STORE_ID,
+                project=PROJECT_ID,
+                location="global",
+            )
+        )
+    )
+    print(f"📂 Documentos abiertos activos: {OPEN_DATA_STORE_ID}")
+else:
+    print("📂 Documentos abiertos: (sin configurar OPEN_DATA_STORE_ID todavía)")
+
+# Stores ABIERTOS para grounding (nunca el de capeo): TFG + apuntes generales.
+herramientas_abiertas = [herramienta_tfg]
+if herramienta_abierta is not None:
+    herramientas_abiertas.append(herramienta_abierta)
+
+# --- MODELO LEGACY (NO usar en paths capados) ---
+# Lleva grounding del data store ANTIGUO (DATA_STORE_ID), que mezcla todos los
+# cursos sin filtro -> FILTRA DE MÁS. Se mantiene sólo por compatibilidad; los
+# endpoints capados usan model_capeo / model_multimodal.
 model = GenerativeModel(
     "gemini-2.5-flash",
     tools=[herramienta_temario, herramienta_tfg],
+    system_instruction=system_instruction,
+    safety_settings=filtros_seguridad,
+    generation_config=configuracion_tutor
+)
+
+# --- MODELO PARA EL FLUJO CAPADO POR CURSO ---
+# SIN herramientas de grounding: el contexto del temario se le inyecta ya
+# filtrado por los cursos que el alumno ha comprado (app/retrieval.py busca en
+# Vertex con filter=course_id: ANY(...)). Al no llevar la herramienta de
+# temario, el modelo NO puede recuperar por su cuenta material de cursos no
+# comprados -> el capeo es estricto (fail-closed).
+model_capeo = GenerativeModel(
+    "gemini-2.5-flash",
+    system_instruction=system_instruction,
+    safety_settings=filtros_seguridad,
+    generation_config=configuracion_tutor
+)
+
+# --- MODELO MULTIMODAL CAPADO (path con archivos/imágenes) ---
+# El material de los cursos COMPRADOS se inyecta ya filtrado por
+# app/retrieval.buscar_contexto -> por eso este modelo NO lleva grounding del
+# data store con capeo (sería un agujero: la herramienta no filtra). Sí lleva
+# grounding de los stores ABIERTOS (TFG + apuntes generales), que son para todos
+# los alumnos. Resultado: el alumno ve las imágenes + el material de SUS cursos
+# (inyectado) + los documentos abiertos (grounding), nunca cursos no comprados.
+model_multimodal = GenerativeModel(
+    "gemini-2.5-flash",
+    tools=herramientas_abiertas,
     system_instruction=system_instruction,
     safety_settings=filtros_seguridad,
     generation_config=configuracion_tutor
@@ -77,7 +132,7 @@ def procesar_fuentes(response):
                             "pagina": pagina 
                         })
     except Exception as e:
-        print(f"⚠️ Error procesando fuentes: {e}")
+        print(f"Error procesando fuentes: {e}")
     return lista_fuentes
 
 def crear_pdf_binario(texto_contenido):

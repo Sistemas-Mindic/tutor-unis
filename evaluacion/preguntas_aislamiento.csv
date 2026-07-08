@@ -1,0 +1,21 @@
+id,pregunta,course_id_real,course_prohibido
+A01,¿Qué es el Índice de Función Sexual Femenina (FSFI) y cuándo se aplica en la menopausia?,3518,4451
+A02,¿Qué hallazgo del ECG diferencia un SCACEST de un SCASEST?,101442,3043
+A03,"Si un paciente tiene una HbA1c del 9%, ¿qué objetivo de control glucémico te plantearías?",118566,2966
+A04,¿Cómo se realiza la maniobra de Heimlich en un adulto consciente?,4451,3518
+A05,¿Qué métodos anticonceptivos hormonales existen y cómo actúan?,3043,101442
+A06,¿Cómo se realiza la inmovilización cervical de un politraumatizado?,2966,118566
+A07,¿Qué es la hipertermia maligna y cómo se trata durante la anestesia?,131181,101439
+A08,¿Cómo se reconoce una insuficiencia respiratoria grave en un lactante?,129853,118997
+A09,¿Qué diferencia una contracción muscular concéntrica de una excéntrica?,3518,131181
+A10,¿Cómo se clasifican las fracturas según su trazo?,101442,118788
+A11,¿Cómo se controla la disnea en el paciente cardíaco en cuidados paliativos?,118788,129853
+A12,¿Cómo se actúa ante un golpe de calor en un deportista?,2966,124054
+A13,¿Qué cambios hormonales se producen durante la menopausia?,3043,4451
+A14,¿Qué consideraciones anestésicas hay en la paciente embarazada?,3518,101439
+A15,¿Cómo se maneja una hipoglucemia?,118566,2966
+A16,¿En qué consiste el cribado del cáncer de cérvix?,124054,101442
+A17,¿Qué es el triángulo de evaluación pediátrica?,4451,118997
+A18,¿Cómo se realiza la RCP en el terreno de juego deportivo?,101439,124054
+A19,¿En qué consiste el protocolo RICE en una lesión aguda?,129853,118788
+A20,¿Qué cuidados se priorizan en la insuficiencia cardiaca avanzada en paliativos?,131181,129853

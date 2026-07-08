@@ -1,0 +1,151 @@
+id,pregunta,course_id,doc_esperado
+P001,¿Qué es el climaterio y en qué se diferencia de la menopausia?,4451,Bloque I_Introducción
+P002,¿Qué cambios hormonales caracterizan la transición a la menopausia?,4451,Bloque II_Aspectos fisiológicos
+P003,¿Qué le ocurre a la producción de estrógenos durante la menopausia?,4451,Bloque II_Aspectos fisiológicos
+P004,¿A qué edad media aparece la menopausia en la población?,4451,Bloque III_Epidemiología
+P005,¿Cuáles son los síntomas más frecuentes de la menopausia?,4451,Bloque IV_Síntomas
+P006,¿Por qué se producen los sofocos durante la menopausia?,4451,Bloque IV_Síntomas
+P007,¿Qué cambios en el estilo de vida reducen el riesgo cardiovascular tras la menopausia?,4451,Bloque V_Menopausia y estilo de vida
+P008,¿Qué papel tienen la dieta y el ejercicio en la menopausia?,4451,Bloque V_Menopausia y estilo de vida
+P009,¿Qué alteraciones psicológicas pueden aparecer durante la menopausia?,4451,Bloque VI_Aspectos psicológicos
+P010,¿Qué es el Índice de Función Sexual Femenina (FSFI) y para qué sirve?,4451,Bloque VII_Menopausia y sexualidad
+P011,¿Cómo afecta la menopausia a la sexualidad y la lubricación vaginal?,4451,Bloque VII_Menopausia y sexualidad
+P012,"Una mujer de 52 años consulta por sofocos, insomnio y sequedad vaginal, ¿cómo orientarías su manejo según el material?",4451,Bloque IV_Síntomas
+P013,Hazme un test sobre los aspectos fisiológicos de la menopausia,4451,Bloque II_Aspectos fisiológicos
+P014,¿En qué se diferencia un SCACEST de un SCASEST?,3043,UCICARDIO
+P015,¿Cuál es la primera prueba diagnóstica ante un síndrome coronario agudo?,3043,UCICARDIO
+P016,¿Qué biomarcadores se elevan en el infarto agudo de miocardio?,3043,UCICARDIO
+P017,¿Cómo se interpreta un electrocardiograma de 12 derivaciones en el síndrome coronario agudo?,3043,UCICARDIO
+P018,¿Qué es el shock cardiogénico y cómo se reconoce?,3043,UCICARDIO
+P019,¿Cómo se maneja la insuficiencia cardiaca aguda en cuidados intensivos?,3043,UCICARDIO
+P020,¿Qué fármacos vasoactivos se utilizan en el paciente cardiovascular crítico?,3043,UCICARDIO
+P021,¿Cómo se monitoriza hemodinámicamente a un paciente en la UCI cardiológica?,3043,UCICARDIO
+P022,¿Qué arritmias son más peligrosas tras un infarto de miocardio?,3043,UCICARDIO
+P023,"Un paciente llega con dolor torácico opresivo y elevación del ST, ¿cuál es el manejo inicial?",3043,UCICARDIO
+P024,Resúmeme el manejo del síndrome coronario agudo,3043,UCICARDIO
+P025,Hazme un test sobre cuidados intensivos cardiovasculares,3043,UCICARDIO
+P026,¿Qué diferencia hay entre la angina estable y la inestable?,3043,UCICARDIO
+P027,¿Cómo se actúa ante una parada cardiorrespiratoria durante una competición deportiva?,124054,EMERGENCIAS_DEPORTE
+P028,¿Qué es la muerte súbita del deportista y cómo se previene?,124054,EMERGENCIAS_DEPORTE
+P029,"Un corredor se desploma con la piel caliente y seca, ¿cómo tratarías un golpe de calor?",124054,EMERGENCIAS_DEPORTE
+P030,¿Cómo se reconoce una conmoción cerebral en el deporte?,124054,EMERGENCIAS_DEPORTE
+P031,¿Qué material básico debe contener un botiquín de emergencias deportivas?,124054,EMERGENCIAS_DEPORTE
+P032,¿Cómo se maneja una deshidratación grave en un deportista?,124054,EMERGENCIAS_DEPORTE
+P033,¿Qué hacer ante un esguince agudo durante un partido?,124054,EMERGENCIAS_DEPORTE
+P034,¿Cómo se realiza la RCP en el terreno de juego?,124054,EMERGENCIAS_DEPORTE
+P035,¿Qué es el síncope de esfuerzo y cómo se aborda?,124054,EMERGENCIAS_DEPORTE
+P036,¿Cómo se inmoviliza una posible fractura en el campo de juego?,124054,EMERGENCIAS_DEPORTE
+P037,Hazme un test sobre emergencias en la práctica deportiva,124054,EMERGENCIAS_DEPORTE
+P038,¿Cuándo está indicado usar un desfibrilador en una emergencia deportiva?,124054,EMERGENCIAS_DEPORTE
+P039,¿Qué es el ejercicio terapéutico y qué objetivos persigue?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P040,"¿Qué tipos de contracción muscular existen: isométrica, concéntrica y excéntrica?",131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P041,¿En qué consiste el entrenamiento propioceptivo?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P042,¿Cómo se dosifica un ejercicio terapéutico de fortalecimiento?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P043,¿Qué ejercicios se indican en la rehabilitación de rodilla?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P044,¿Cómo progresa por fases un programa de ejercicio terapéutico?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P045,¿Qué diferencia hay entre el ejercicio isométrico y el isotónico?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P046,¿Qué papel tienen los estiramientos en el ejercicio terapéutico?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P047,¿Cómo se aplica el ejercicio terapéutico en lesiones de hombro?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P048,¿Qué precauciones hay que tener al prescribir ejercicio terapéutico?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P049,Resúmeme las indicaciones del ejercicio terapéutico en rehabilitación,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P050,Hazme un test sobre ejercicio terapéutico,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P051,¿Qué diferencia hay entre un esguince y una luxación?,118788,Curso TRAUE
+P052,¿Cómo se clasifican las fracturas según el trazo?,118788,Traumatismos y lesiones
+P053,¿En qué consiste el tratamiento conservador de una fractura?,118788,Curso TRAUE
+P054,¿Cuándo está indicado el tratamiento quirúrgico de una fractura?,118788,Curso TRAUE
+P055,¿Qué es una fractura abierta y qué riesgos conlleva?,118788,Traumatismos y lesiones
+P056,¿En qué consiste el protocolo RICE en una lesión aguda?,118788,Curso TRAUE
+P057,¿Cómo se inmoviliza una extremidad fracturada?,118788,Traumatismos y lesiones
+P058,¿Qué complicaciones puede tener una fractura?,118788,Curso TRAUE
+P059,¿Qué es una contusión y cómo se trata?,118788,Traumatismos y lesiones
+P060,"Un paciente cae y presenta deformidad e impotencia funcional en el antebrazo, ¿cómo lo orientarías?",118788,Curso TRAUE
+P061,Compara el tratamiento conservador y el quirúrgico de una fractura,118788,Curso TRAUE
+P062,Hazme un test sobre traumatismos y lesiones musculoesqueléticas,118788,Traumatismos y lesiones
+P063,¿Cómo se realiza la RCP básica en un adulto?,3518,CURSO_PRIMEROS AUXILIOS
+P064,¿Cómo se realiza la maniobra de Heimlich en un adulto consciente?,3518,CURSO_PRIMEROS AUXILIOS
+P065,¿Qué pasos componen la cadena de supervivencia?,3518,CURSO_PRIMEROS AUXILIOS
+P066,¿Cómo se controla una hemorragia externa abundante?,3518,CURSO_PRIMEROS AUXILIOS
+P067,¿Cómo se actúa ante una quemadura?,3518,CURSO_PRIMEROS AUXILIOS
+P068,¿Para qué sirve la posición lateral de seguridad y cómo se coloca?,3518,CURSO_PRIMEROS AUXILIOS
+P069,¿Cómo se actúa ante una intoxicación?,3518,CURSO_PRIMEROS AUXILIOS
+P070,¿Cómo se curan las heridas leves?,3518,CURSO_PRIMEROS AUXILIOS
+P071,¿Qué hacer ante una persona inconsciente que respira con normalidad?,3518,CURSO_PRIMEROS AUXILIOS
+P072,"Una persona se atraganta y no puede toser ni hablar, ¿qué harías?",3518,CURSO_PRIMEROS AUXILIOS
+P073,Hazme un test de primeros auxilios básicos,3518,CURSO_PRIMEROS AUXILIOS
+P074,¿Cómo se usa un desfibrilador externo automático (DEA)?,3518,CURSO_PRIMEROS AUXILIOS
+P075,¿Cómo se reconoce una insuficiencia respiratoria en el niño crítico?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P076,¿Qué es el triángulo de evaluación pediátrica?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P077,¿Cómo se identifica una sepsis en el paciente pediátrico?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P078,¿Cómo se maneja el shock en pediatría?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P079,¿Cómo se realiza la RCP pediátrica?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P080,¿Cómo se valora y se trata la deshidratación en el niño?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P081,¿Cómo se actúa ante una convulsión febril?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P082,Calcula la dosis de adrenalina en una parada cardiaca pediátrica para un niño de 20 kg,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P083,"Un lactante presenta tiraje subcostal y aleteo nasal, ¿qué signos de gravedad valoras?",118997,DOCUMENTACIÓN_COMPLETA_PCP
+P084,¿Qué signos de alarma indican gravedad en un niño crítico?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P085,Hazme un test sobre patología crítica en pediatría,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P086,¿Cómo se maneja la vía aérea en el niño crítico?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P087,¿Cómo se realiza la inmovilización cervical en un politraumatizado?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P088,¿Cuándo y cómo se coloca un collarín cervical?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P089,¿Qué es la maniobra de volteo en bloque y cuándo se usa?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P090,¿Cómo se utiliza el tablero espinal?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P091,¿Cómo se retira el casco a un motorista accidentado?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P092,¿En qué consiste la valoración primaria del politraumatizado?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P093,¿Cómo se moviliza a un paciente con sospecha de lesión medular?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P094,¿Qué dispositivos se usan para inmovilizar las extremidades?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P095,"Tras un accidente de tráfico el paciente está consciente con dolor cervical, ¿cómo lo inmovilizas?",118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P096,Resúmeme las técnicas de movilización del paciente politraumatizado,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P097,Hazme un test sobre inmovilización del paciente politraumatizado,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P098,¿Qué consideraciones anestésicas hay en la paciente embarazada?,101439,Anestesia en Situaciones Especiales
+P099,¿Cómo se maneja la anestesia en el paciente obeso?,101439,Anestesia en Situaciones Especiales
+P100,¿Qué precauciones anestésicas requiere el paciente cardiópata?,101439,Anestesia en Situaciones Especiales
+P101,¿Cómo se aborda una vía aérea difícil prevista?,101439,Anestesia en Situaciones Especiales
+P102,¿Qué es la hipertermia maligna y cómo se trata?,101439,Anestesia en Situaciones Especiales
+P103,¿Qué particularidades tiene la anestesia pediátrica?,101439,Anestesia en Situaciones Especiales
+P104,¿Qué consideraciones anestésicas hay en el paciente geriátrico?,101439,Anestesia en Situaciones Especiales
+P105,¿Qué diferencia hay entre la anestesia general y la regional?,101439,Anestesia en Situaciones Especiales
+P106,¿Cómo se maneja la anestesia en el paciente con insuficiencia renal?,101439,Anestesia en Situaciones Especiales
+P107,"Una embarazada a término requiere cirugía urgente, ¿qué consideraciones anestésicas priorizas?",101439,Anestesia en Situaciones Especiales
+P108,Hazme un test sobre anestesia en situaciones especiales,101439,Anestesia en Situaciones Especiales
+P109,¿Qué fármacos están implicados en la hipertermia maligna?,101439,Anestesia en Situaciones Especiales
+P110,¿Qué métodos anticonceptivos hormonales existen y cómo actúan?,101442,Curso ATG
+P111,¿En qué consiste el cribado del cáncer de cérvix?,101442,DOCUMENTACION_MAQUETADA_ATG
+P112,¿Cómo se realiza una citología cervicovaginal?,101442,Curso ATG
+P113,¿Cuáles son las fases del ciclo menstrual?,101442,Curso ATG
+P114,¿Qué infecciones de transmisión sexual son más frecuentes y cómo se previenen?,101442,DOCUMENTACION_MAQUETADA_ATG
+P115,¿Qué métodos anticonceptivos de barrera existen?,101442,Curso ATG
+P116,¿En qué consiste el control del embarazo de bajo riesgo?,101442,DOCUMENTACION_MAQUETADA_ATG
+P117,¿Cómo se realiza la exploración ginecológica básica?,101442,Curso ATG
+P118,¿Qué es la anticoncepción de urgencia?,101442,Curso ATG
+P119,"Una mujer joven consulta para iniciar anticoncepción, ¿qué opciones le plantearías?",101442,Curso ATG
+P120,Hazme un test sobre métodos anticonceptivos,101442,Curso ATG
+P121,¿Cada cuánto se recomienda el cribado del cáncer de cérvix?,101442,DOCUMENTACION_MAQUETADA_ATG
+P122,¿Qué diferencias hay entre la diabetes mellitus tipo 1 y la tipo 2?,2966,DOCUMENTACION_DIA_OK
+P123,"Si un paciente tiene una HbA1c del 9%, ¿qué indica y qué objetivo se busca?",2966,DOCUMENTACION_DIA_OK
+P124,¿Cómo se maneja una hipoglucemia?,2966,DOCUMENTACION_DIA_OK
+P125,¿Qué tipos de insulina existen y cómo se diferencian?,2966,DOCUMENTACION_DIA_OK
+P126,¿Cómo se previene y se trata el pie diabético?,2966,DOCUMENTACION_DIA_OK
+P127,¿Cuáles son las complicaciones crónicas de la diabetes?,2966,DOCUMENTACION_DIA_OK
+P128,¿Qué recomendaciones dietéticas se dan al paciente diabético?,2966,DOCUMENTACION_DIA_OK
+P129,¿Cómo se realiza el autocontrol de la glucemia?,2966,DOCUMENTACION_DIA_OK
+P130,¿Qué es la cetoacidosis diabética y cómo se reconoce?,2966,DOCUMENTACION_DIA_OK
+P131,"Un paciente diabético llega sudoroso, tembloroso y confuso, ¿qué sospechas y cómo actúas?",2966,DOCUMENTACION_DIA_OK
+P132,Resúmeme el tratamiento de la diabetes mellitus tipo 2,2966,DOCUMENTACION_DIA_OK
+P133,Hazme un test sobre la atención al paciente con diabetes,2966,DOCUMENTACION_DIA_OK
+P134,¿Cómo se maneja la disnea en el paciente cardíaco en cuidados paliativos?,129853,Cuidados_Cardiacos
+P135,¿Qué cuidados se priorizan en la insuficiencia cardiaca avanzada?,129853,Cuidados_Cardiacos
+P136,¿Cómo se controlan los síntomas en la insuficiencia cardiaca terminal?,129853,Cuidados_Cardiacos
+P137,¿Qué es la sedación paliativa y cuándo se indica?,129853,Cuidados_Cardiacos
+P138,¿Qué fármacos se usan para aliviar síntomas en el paciente cardíaco paliativo?,129853,Cuidados_Cardiacos
+P139,¿Cómo se aborda la comunicación con el paciente y la familia en cuidados paliativos?,129853,Cuidados_Cardiacos
+P140,¿Cómo se maneja el dolor en el paciente cardíaco paliativo?,129853,Cuidados_Cardiacos
+P141,¿Qué papel tiene la oxigenoterapia en la disnea paliativa?,129853,Cuidados_Cardiacos
+P142,¿Cómo se manejan los edemas en la insuficiencia cardiaca avanzada?,129853,Cuidados_Cardiacos
+P143,"Un paciente con insuficiencia cardiaca terminal tiene disnea de reposo, ¿cómo aliviarías sus síntomas?",129853,Cuidados_Cardiacos
+P144,Hazme un test sobre cuidados cardíacos en el paciente paliativo,129853,Cuidados_Cardiacos
+P145,¿Cuándo se considera terminal una insuficiencia cardiaca?,129853,Cuidados_Cardiacos
+P146,¿Qué es la terapia hormonal sustitutiva y cuándo se plantea en la menopausia?,4451,Bloque V_Menopausia y estilo de vida
+P147,¿Cómo se clasifica la insuficiencia cardiaca según la NYHA?,3043,UCICARDIO
+P148,¿Qué es la hemoglobina glicosilada (HbA1c) y qué refleja?,2966,DOCUMENTACION_DIA_OK
+P149,¿Cómo se actúa ante una crisis convulsiva según primeros auxilios?,3518,CURSO_PRIMEROS AUXILIOS
+P150,¿Cómo se reconoce y se maneja una crisis asmática en el niño?,118997,DOCUMENTACIÓN_COMPLETA_PCP

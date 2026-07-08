@@ -1,0 +1,30 @@
+﻿id,pregunta,course_id,doc_esperado
+P001,¿Qué es el climaterio y en qué se diferencia de la menopausia?,4451,Bloque I_Introducción
+P002,¿Qué cambios hormonales caracterizan la transición a la menopausia?,4451,Bloque II_Aspectos fisiológicos
+P010,¿Qué es el Índice de Función Sexual Femenina (FSFI) y para qué sirve?,4451,Bloque VII_Menopausia y sexualidad
+P013,Hazme un test sobre los aspectos fisiológicos de la menopausia,4451,Bloque II_Aspectos fisiológicos
+P014,¿En qué se diferencia un SCACEST de un SCASEST?,3043,UCICARDIO
+P015,¿Cuál es la primera prueba diagnóstica ante un síndrome coronario agudo?,3043,UCICARDIO
+P027,¿Cómo se actúa ante una parada cardiorrespiratoria durante una competición deportiva?,124054,EMERGENCIAS_DEPORTE
+P028,¿Qué es la muerte súbita del deportista y cómo se previene?,124054,EMERGENCIAS_DEPORTE
+P039,¿Qué es el ejercicio terapéutico y qué objetivos persigue?,131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P040,"¿Qué tipos de contracción muscular existen: isométrica, concéntrica y excéntrica?",131181,EJERCICIO_TERAPÉUTICO_FISIOS
+P051,¿Qué diferencia hay entre un esguince y una luxación?,118788,Curso TRAUE
+P052,¿Cómo se clasifican las fracturas según el trazo?,118788,Traumatismos y lesiones
+P063,¿Cómo se realiza la RCP básica en un adulto?,3518,CURSO_PRIMEROS AUXILIOS
+P064,¿Cómo se realiza la maniobra de Heimlich en un adulto consciente?,3518,CURSO_PRIMEROS AUXILIOS
+P075,¿Cómo se reconoce una insuficiencia respiratoria en el niño crítico?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P076,¿Qué es el triángulo de evaluación pediátrica?,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P082,Calcula la dosis de adrenalina en una parada cardiaca pediátrica para un niño de 20 kg,118997,DOCUMENTACIÓN_COMPLETA_PCP
+P087,¿Cómo se realiza la inmovilización cervical en un politraumatizado?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P088,¿Cuándo y cómo se coloca un collarín cervical?,118566,INMOVILIZACIÓN PACIENTE POLITRAUMATIZADO
+P098,¿Qué consideraciones anestésicas hay en la paciente embarazada?,101439,Anestesia en Situaciones Especiales
+P099,¿Cómo se maneja la anestesia en el paciente obeso?,101439,Anestesia en Situaciones Especiales
+P110,¿Qué métodos anticonceptivos hormonales existen y cómo actúan?,101442,Curso ATG
+P111,¿En qué consiste el cribado del cáncer de cérvix?,101442,DOCUMENTACION_MAQUETADA_ATG
+P122,¿Qué diferencias hay entre la diabetes mellitus tipo 1 y la tipo 2?,2966,DOCUMENTACION_DIA_OK
+P123,"Si un paciente tiene una HbA1c del 9%, ¿qué indica y qué objetivo se busca?",2966,DOCUMENTACION_DIA_OK
+P133,Hazme un test sobre la atención al paciente con diabetes,2966,DOCUMENTACION_DIA_OK
+P134,¿Cómo se maneja la disnea en el paciente cardíaco en cuidados paliativos?,129853,Cuidados_Cardiacos
+P135,¿Qué cuidados se priorizan en la insuficiencia cardiaca avanzada?,129853,Cuidados_Cardiacos
+P144,Hazme un test sobre cuidados cardíacos en el paciente paliativo,129853,Cuidados_Cardiacos

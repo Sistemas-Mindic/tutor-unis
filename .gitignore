@@ -1,0 +1,14 @@
+# Entorno / secretos
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Sistema
+.DS_Store

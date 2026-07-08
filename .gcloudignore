@@ -1,0 +1,59 @@
+# Patrones de exclusión para `gcloud run deploy --source`.
+# Lo que NO aparece aquí se sube a Cloud Build. Por eso es crítico
+# excluir .venv (huge), .git (historial completo) y secretos locales.
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Git
+.git/
+.gitignore
+
+# Entornos / secretos locales (CRÍTICO: nunca subir .env al builder)
+.env
+.env.*
+*.env
+credentials.json
+service-account*.json
+
+# Node (por si hay frontend con deps en algún momento)
+node_modules/
+
+# OS y editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Recursos de desarrollo no necesarios en runtime
+recursos/
+docs/
+*.pdf
+*.docx
+
+# Cache de Cloud Run / Docker
+.dockerignore
+
+# Tests (opcional: si quieres que se ejecuten en build, quita esta línea)
+tests/
+test_*.py
+*_test.py
+
+# Otros
+README.txt
+*.md
