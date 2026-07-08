@@ -208,8 +208,43 @@ async def chat_endpoint(
 
             estilo_medico = "Ilustración médica profesional, estilo atlas de anatomía (Netter), realista, detallado, fondo blanco limpio, educativo, alta resolución: "
             
-            # Combinamos tu petición con el estilo forzado
-            prompt_final = estilo_medico + prompt_imagen
+            # CONTEXTO PARA EL GENERADOR: Imagen no tiene memoria y solo recibe
+            # texto; peticiones referenciales ("ahora uno sano", "otro") llegan sin
+            # referente. Pasamos los últimos mensajes + el último dibujo A GEMINI
+            # (no a Imagen, que dibujaría el texto) para que destile UNA frase
+            # concreta de qué dibujar. Si algo falla, se usa la petición literal.
+            prompt_dibujo = prompt_imagen
+            try:
+                hist = get_user_history(user["uid"])
+                ultimos = "\n".join(
+                    ("Alumno" if m.get("role") == "user" else "Tutor")
+                    + ": " + m["parts"][0]["text"]
+                    for m in hist[-6:]
+                    if m.get("parts") and m["parts"][0].get("text")
+                )
+                prev = (_ultima_imagen.get(user["uid"]) or {}).get("prompt", "")
+                if ultimos or prev:
+                    rw = (
+                        "A partir del contexto de la conversación, escribe en UNA "
+                        "sola frase concreta y autosuficiente QUÉ hay que dibujar. "
+                        "Resuelve referencias como «otro», «uno», «el mismo» o "
+                        "«ahora uno sano» con el contexto (si se dibujaba un "
+                        "corazón, «ahora uno sano» = «un corazón sano»). No añadas "
+                        "nada que el alumno no haya pedido. Devuelve SOLO la frase.\n\n"
+                        + (f"Último dibujo: {prev}\n" if prev else "")
+                        + (f"=== ÚLTIMOS MENSAJES ===\n{ultimos}\n\n" if ultimos else "")
+                        + f"El alumno pide dibujar ahora: {prompt_imagen}"
+                    )
+                    r = await run_in_threadpool(
+                        model_capeo.generate_content, rw)
+                    if getattr(r, "text", "").strip():
+                        prompt_dibujo = r.text.strip()
+                        print(f"Prompt de imagen resuelto: {prompt_dibujo!r}")
+            except Exception as e:  # noqa: BLE001
+                print(f"No se pudo enriquecer el prompt de imagen: {e}")
+
+            # Combinamos la petición (ya resuelta) con el estilo forzado
+            prompt_final = estilo_medico + prompt_dibujo
 
             try:
                 # Generamos la imagen con el SDK google-genai (cascada de modelos)
@@ -223,16 +258,16 @@ async def chat_endpoint(
                 # en el contexto (nota_historial, oculta, no se muestra). Así un
                 # follow-up "¿qué enfermedad tiene?" responde seguro y concreto,
                 # sin depender de que el modelo "conecte" el dibujo.
-                nota = f"He generado una ilustración de «{prompt_imagen}»."
+                nota = f"He generado una ilustración de «{prompt_dibujo}»."
                 try:
                     uid = user["uid"]
                     course_ids = get_user_course_ids(uid)
                     ctx = ""
                     if course_ids:
-                        ctx, _ = buscar_contexto(prompt_imagen, course_ids, k=6)
+                        ctx, _ = buscar_contexto(prompt_dibujo, course_ids, k=6)
                     desc_prompt = (
                         "MIRA la ilustración que se adjunta (la acabas de generar "
-                        f"a partir de la petición «{prompt_imagen}»). En 2-3 frases, "
+                        f"a partir de la petición «{prompt_dibujo}»). En 2-3 frases, "
                         "describe QUÉ se ve en ella y qué enfermedad o condición "
                         "CONCRETA y plausible representa (empieza por el nombre de "
                         "la enfermedad). Apóyate en el material de abajo si lo hay. "
@@ -249,12 +284,13 @@ async def chat_endpoint(
                         model_capeo.generate_content, entrada)
                     if getattr(resp, "text", ""):
                         nota = (
-                            f"He generado una ilustración de «{prompt_imagen}». "
+                            f"He generado una ilustración de «{prompt_dibujo}». "
                             f"Esta ilustración representa: {resp.text.strip()}")
                 except Exception as e:  # noqa: BLE001
                     print(f"No se pudo generar la descripción de la imagen: {e}")
 
-                _ultima_imagen[user["uid"]] = {"desc": nota, "ts": _time.time()}
+                _ultima_imagen[user["uid"]] = {
+                    "desc": nota, "prompt": prompt_dibujo, "ts": _time.time()}
                 return {
                     "imagen_base64": img_base64,
                     "nota_historial": nota,
