@@ -818,20 +818,13 @@ async function sendMessage() {
                     saveMessageToHistory(currentChatId, 'bot', imgPlaceholder, []);
                 }
             } else {
-                // Multimodal: pintamos texto directo + fuentes + audio
-                bubble.innerHTML = processText(data.respuesta || '');
-                try {
-                    renderMathInElement(bubble, {
-                        delimiters: [
-                            { left: "$$", right: "$$", display: true },
-                            { left: "$", right: "$", display: false }
-                        ]
-                    });
-                } catch (e) {}
-                if (data.fuentes && data.fuentes.length > 0) {
-                    renderSources(bubble, data.fuentes);
-                }
-                addAudioButton(bubble);
+                // Multimodal: la respuesta llega ENTERA (este path no streamea),
+                // pero la "tecleamos" con typeWriterEffect para dar la misma
+                // sensación de escritura progresiva que el modo texto. La propia
+                // función pinta al final las fórmulas, las fuentes y el audio.
+                bubble.classList.add('streaming');
+                await typeWriterEffect(bubble, data.respuesta || '', data.fuentes || []);
+                bubble.classList.remove('streaming');
                 maybeAutoScroll();
                 // Guardar respuesta multimodal en historial
                 if (typeof saveMessageToHistory === 'function') {
@@ -905,8 +898,11 @@ function typeWriterEffect(element, fullText, sources = []) {
                 element.innerHTML = processText(fullText); 
                 element.classList.remove('cursor');
                 
-                renderMathInElement(element, { 
-                    delimiters: [ {left: "$$", right: "$$", display: true} ] 
+                renderMathInElement(element, {
+                    delimiters: [
+                        {left: "$$", right: "$$", display: true},
+                        {left: "$", right: "$", display: false}
+                    ]
                 });
                 renderSources(element, sources);
                 addAudioButton(element);

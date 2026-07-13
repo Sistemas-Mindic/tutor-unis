@@ -41,10 +41,13 @@ configuracion_tutor = GenerationConfig(
 )
 
 # --- TOPE DE CONSUMO DIARIO POR ALUMNO ---
-# Suma de tokens (prompt + respuesta) de Gemini por usuario y día (UTC). Evita
-# grandes consumos / abuso (sobre todo el modo documento completo, que mete PDFs
-# enteros). Soft-cap: se comprueba ANTES de generar. Ajusta el número a tu gusto.
-LIMITE_TOKENS_DIA = 400_000
+# Suma de tokens (prompt + respuesta) de Gemini por usuario y día (UTC). Es un
+# soft-cap que se comprueba ANTES de generar. Se sube MUY alto para que un alumno
+# normal NUNCA lo alcance; queda solo como red de seguridad frente a abuso/bucles
+# (p. ej. un cliente descontrolado que dispare miles de peticiones). Para quitarlo
+# del todo, pon un número enorme o elimina las comprobaciones de tokens_usados_hoy
+# en main.py.
+LIMITE_TOKENS_DIA = 5_000_000
 
 # --- SYSTEM PROMPT ---
 system_instruction = """
